@@ -1,0 +1,5 @@
+https://medium.com/@acpanjan/download-google-drive-files-using-wget-3c2c025a8b99
+
+
+Above are instructions to download google drive shared file in servers command line
+
