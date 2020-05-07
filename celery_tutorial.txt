@@ -1,1 +1,15 @@
 https://www.accordbox.com/blog/how-to-setup-celery-django/
+
+
+Why Django project need Celery
+Celery can help run tasks on worker process instead of web process, so in web process we can return HTTP response back immediately (even the task in worker process is still running) to our user, the request cycle would not be blocked and user experience would be better.
+
+Below are some cases Celery can help you
+
+You built a comment app which supports mention operation, user can use @ to mention other user and they would receive email notifications. If one user mentions 10 people in one comment, the web process needs to process and send 10 emails. Sometimes this might be time-consuming (network, server and other factors), but Celery can let you send emails in background process, and you can return http response to user so he do not need to wait.
+
+When user upload image to your web application, you need to generate thumbnail, you can do the task in worker process
+
+You need to do some period job, for example, generate daily report, clear expired session data. You can let Celery help send task at the target time to the worker process.
+
+When you build web application, you should try to make the response time of your web application lower than 500ms (New Relic or Scout APM can help), if some response time is big, you should figure out the reason and try to solve it. Celery can help when solving this problem.
