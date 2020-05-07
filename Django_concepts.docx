@@ -1,0 +1,46 @@
+Following are the DJango concepts:
+
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
+
+Extending User Model in various ways.
+
+Ways to Extend the Existing User Model
+Generally speaking, there are four different ways to extend the existing User model. Read below why and when to use them.
+
+Option 1: Using a Proxy Model
+What is a Proxy Model?
+It is a model inheritance without creating a new table in the database. It is used to change the behaviour of an existing model (e.g. default ordering, add new methods, etc.) without affecting the existing database schema.
+
+When should I use a Proxy Model?
+You should use a Proxy Model to extend the existing User model when you don’t need to store extra information in the database, but simply add extra methods or change the model’s query Manager.
+
+That’s what I need! Take me to the instructions.
+
+Option 2: Using One-To-One Link With a User Model (Profile)
+What is a One-To-One Link?
+It is a regular Django model that’s gonna have it’s own database table and will hold a One-To-One relationship with the existing User Model through a OneToOneField.
+
+When should I use a One-To-One Link?
+You should use a One-To-One Link when you need to store extra information about the existing User Model that’s not related to the authentication process. We usually call it a User Profile.
+
+That’s what I need! Take me to the instructions.
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#proxy
+
+Option 3: Creating a Custom User Model Extending AbstractBaseUser
+What is a Custom User Model Extending AbstractBaseUser?
+It is an entirely new User model that inherit from AbstractBaseUser. It requires a special care and to update some references through the settings.py. Ideally it should be done in the begining of the project, since it will dramatically impact the database schema. Extra care while implementing it.
+
+When should I use a Custom User Model Extending AbstractBaseUser?
+You should use a Custom User Model when your application have specific requirements in relation to the authentication process. For example, in some cases it makes more sense to use an email address as your identification token instead of a username.
+
+That’s what I need! Take me to the instructions.
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
+
+Option 4: Creating a Custom User Model Extending AbstractUser
+What is a Custom User Model Extending AbstractUser?
+It is a new User model that inherit from AbstractUser. It requires a special care and to update some references through the settings.py. Ideally it should be done in the begining of the project, since it will dramatically impact the database schema. Extra care while implementing it.
+
+When should I use a Custom User Model Extending AbstractUser?
+You should use it when you are perfectly happy with how Django handles the authentication process and you wouldn’t change anything on it. Yet, you want to add some extra information directly in the User model, without having to create an extra class (like in the Option 2).
+
+That’s what I need! Take me to the instructions.
