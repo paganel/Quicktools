@@ -1,2 +1,9 @@
 http://www.prepbootstrap.com/bootstrap-template/bootstrap-editable-grid
 
+http://www.prepbootstrap.com/bootstrap-template/jquery-bootstrap-switch
+
+http://www.prepbootstrap.com/bootstrap-template/jquery-autocomplete
+
+http://www.prepbootstrap.com/bootstrap-template/timeline
+
+
