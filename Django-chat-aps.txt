@@ -1,0 +1,34 @@
+
+Django private chat
+https://github.com/Bearle/django-private-chat
+This is also simple chat useful to implement Django chat.
+
+THis uses websocket concept to build chat. This will run on same server
+Limited support with Latest django versions.
+
+NOte: This works well as per my testing on the date of creating this file is Django 2.2
+
+
+
+Django-channels-chat:
+A basic simple chat application using API, Django channels concept.
+ To support scaling it also has support with redis-server
+
+redis-server
+Ref: https://github.com/shekar9160/channels_redis
+Tips: installing channels-chat
+THis is Notes to install pipenv
+
+Ref: https://stackoverflow.com/questions/46391721/pipenv-command-not-found
+
+Use sudo pip install pipenv to install pipenv
+
+sudo -H pip install -U pipenv (eg on ubuntu)
+
+Or you can install it on Virtualenv directly
+
+pip install pipenv
+
+
+
+https://colinkingswood.github.io/Model-Form-Customisation/
