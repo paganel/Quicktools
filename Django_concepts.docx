@@ -44,3 +44,7 @@ When should I use a Custom User Model Extending AbstractUser?
 You should use it when you are perfectly happy with how Django handles the authentication process and you wouldn’t change anything on it. Yet, you want to add some extra information directly in the User model, without having to create an extra class (like in the Option 2).
 
 That’s what I need! Take me to the instructions.
+
+
+Django- Model form customization
+https://colinkingswood.github.io/Model-Form-Customisation/
