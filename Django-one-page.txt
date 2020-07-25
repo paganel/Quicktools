@@ -1,0 +1,3 @@
+https://www.ordinarycoders.com/blog/article/django-and-stripe
+
+To integrage django one page example completely
