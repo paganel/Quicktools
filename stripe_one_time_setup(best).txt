@@ -1,0 +1,4 @@
+https://www.laravelcode.com/post/stripe-payment-gateway-integration-in-django-with-example
+
+
+This is the best article to integrate Stripe paymentgateway one time
